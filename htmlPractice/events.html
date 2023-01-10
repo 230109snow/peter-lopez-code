@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
@@ -19,7 +20,36 @@
     <button onclick="increment()">Increment</button>
     <button onclick="decrement()">Decrement</button>
     <button onclick="reset()">Reset</button>
+    <div>
+        <input type="number" name="fizzbuzz-input" id="fizzbuzz-input">
+        <button onclick="fizzbuzz()">Fizzbuzz</button>
+    </div>
+    <div id="fizzbuzz-output">
+        <!--Placeholder div to print output-->
+        
+    </div>
 
+    <div class="container">
+        <h2>Calculator</h2>
+        <button onclick="calcNine()">9</button>
+        <button onclick="calcEight()">8</button>
+        <button onclick="calcSeven()">7</button>
+        <br>
+        <button onclick="calcSix()">6</button>
+        <button onclick="calcFive()">5</button>
+        <button onclick="calcFour()">4</button>
+        <br>
+        <button onclick="calcThree()">3</button>
+        <button onclick="calcTwo()">2</button>
+        <button onclick="calcOne()">1</button>
+        <br>
+        <button onclick="calcAdd()">+</button>
+        <button onclick="calcZero()">0</button>
+        <button onclick="calcMinus()">-</button>
+        <br>
+        <button onclick="calcEquals()">=</button>
+        <button onclick="calcClear()">Clear</button>
+    </div>
     <script src="events.js"></script>
 </body>
 </html>
