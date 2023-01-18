@@ -1,3 +1,4 @@
+/*
 var num = 0;
 function increment() {
     console.log(num++);
@@ -22,6 +23,12 @@ function modifyNum(number) {
 }
 
 function fizzbuzz(){
+
+    //prevents the default behavior from happening (aka refresh)
+   // event.preventDefault;
+    //prevents event from bubbling up to its parents
+   // event.stopPropagation;
+
     let input = document.getElementById('fizzbuzz-input').value;
     let count = 1;
     let output = '';
@@ -44,48 +51,22 @@ function fizzbuzz(){
     }
     countElem.innerText = output;
 }
-
-let calcTempVal = '';
-
-function calcOne(){
-    calcTempVal =+ '1';
-}
-function calcTwo(){
-    calcTempVal =+ '2';
-}
-function calcThree(){
-    calcTempVal =+ '3';
-}
-function calcFour(){
-    calcTempVal =+ '4';
-}
-function calcFive(){
-    calcTempVal =+ '5';
-}
-function calcSix(){
-    calcTempVal =+ '6';
-}
-function calcSeven(){
-    calcTempVal =+ '7';
-}
-function calcEight(){
-    calcTempVal =+ '8';
-}
-function calcNine(){
-    calcTempVal =+ '9';
-}
-function calcZero(){
-    calcTempVal =+ '0';
-}
-function calcPlus(){
-    calcTempVal =+ '+';
-}
-function calcMinus(){
-    calcTempVal =+ '-';
-}
-function calcEquals(){
+//different ways to create functions
+//function declaration
+function calculator(value) {
 
 }
-function calcClear(){
-    calcTempVal = '';
+
+//anonymous function assigned to a variable
+const fn = function() {
+
 }
+// fn2 variable is pointing to calculator function
+const fn2 = calculator;
+
+//arrow function
+const fn3 = () => {
+
+}
+
+*/

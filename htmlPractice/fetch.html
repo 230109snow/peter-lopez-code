@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="#">Index</a>
+                <a href="events.html">Events</a>
+                <a href="fetch.html">Fetch</a>
+            </li>
+        </ul>
+    </nav>
+
+    <h1>Fetch API</h1>
+    <h3>Http Status Code</h3>
+    <input type="number" id="status-code">
+    <button onclick="fetchDogs()" id="status-code-button">Fetch</button>
+    <img src="https://http.dog/200.jpg" width="200px" height="200px" id="status-code-img"alt="">
+
+    <div id="the-cat-api">
+        <label for="img-num">How many cats do you want?</label>
+        <input type="number" name="img-num" id="img-num">
+        <button onclick="getCats()" >Get me Cats!</button>
+    </div>
+    <script src="fetch.js"></script>
+</body>
+</html>

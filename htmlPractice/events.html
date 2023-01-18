@@ -13,6 +13,7 @@
             <li>
                 <a href="index.html">Index</a>
                 <a href="#">Events</a>
+                <a href="fetch.html">Fetch</a>
             </li>
         </ul>
     </nav>
@@ -20,36 +21,67 @@
     <button onclick="increment()">Increment</button>
     <button onclick="decrement()">Decrement</button>
     <button onclick="reset()">Reset</button>
+    <br>
     <div>
-        <input type="number" name="fizzbuzz-input" id="fizzbuzz-input">
-        <button onclick="fizzbuzz()">Fizzbuzz</button>
+        <h2>FizzBuzz</h2>
+        <form onSubmit="fizzbuzz(); return false;">
+            <input type="number" max="100" min="1" name="fizzbuzz-input" id="fizzbuzz-input">
+            <button onclick="fizzbuzz()">Fizzbuzz</button>
+        </form>
     </div>
     <div id="fizzbuzz-output">
         <!--Placeholder div to print output-->
         
     </div>
 
-    <div class="container">
-        <h2>Calculator</h2>
-        <button onclick="calcNine()">9</button>
-        <button onclick="calcEight()">8</button>
-        <button onclick="calcSeven()">7</button>
-        <br>
-        <button onclick="calcSix()">6</button>
-        <button onclick="calcFive()">5</button>
-        <button onclick="calcFour()">4</button>
-        <br>
-        <button onclick="calcThree()">3</button>
-        <button onclick="calcTwo()">2</button>
-        <button onclick="calcOne()">1</button>
-        <br>
-        <button onclick="calcAdd()">+</button>
-        <button onclick="calcZero()">0</button>
-        <button onclick="calcMinus()">-</button>
-        <br>
-        <button onclick="calcEquals()">=</button>
-        <button onclick="calcClear()">Clear</button>
+    <div class="calc-div">
+        <form name="calcform">
+            <h2>Calculator</h2>
+            <table>
+                <tr><th id="calcbox-row">
+                    <td><input id=calcbox type="text" name="box"></td>
+                </th></tr>
+                <tr>
+                    <td><input type="button" value ="9" onclick="box.value+=9"></td>
+                    <td><input type="button" value="8" onclick="box.value+=8"></td>
+                    <td><input type="button" value="7" onclick="box.value+=7"></td>
+                    <td><input type="button" value="+" onclick="box.value+= '+'"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="6" onclick="box.value+=6"></td>
+                    <td><input type="button" value="5" onclick="box.value+=5"></td>
+                    <td><input type="button" value="4" onclick="box.value+=4"></td>
+                    <td><input type="button" value="-" onclick="box.value+= '-'"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="3" onclick="box.value+=3"></td>
+                    <td><input type="button" value="2" onclick="box.value+=2"></td>
+                    <td><input type="button" value="1" onclick="box.value+=1"></td>
+                    <td><input type="button" value="*" onclick="box.value+='*'"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="0" onclick="box.value+=0"></td>
+                    <td><input type="button" value="." onclick="box.value+='.'"></td>
+                    <td><input type="button" value="/" onclick="box.value+='/'"></td>
+                    <td><input type="button" value="C" onclick="box.value = ''"></td>
+                    
+                </tr>
+                <tr>
+                    <td id="equals-button-row"><input type="button" value="=" onclick="box.value=eval(box.value);"></td>
+                </tr>
+            </table>
+        </form>
     </div>
+    <br>
+    <br>
+    
+    <div name="hangman-div">
+        <h1>Hangman</h1>
+        <div name="hangman-hud">
+
+        </div>
+    </div>
+
     <script src="events.js"></script>
 </body>
 </html>

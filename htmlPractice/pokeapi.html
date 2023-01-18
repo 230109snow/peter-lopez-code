@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Index</a>
+                <a href="events.html">Events</a>
+                <a href="fetch.html">Fetch</a>
+                <a href="#">PokeAPI</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="pokeapi-div">
+        <h1><h1 id="header-text">Kanto Pokemon</h1></h1>
+        <label for="pokeNum">Show me the Pokemon!</label>
+    </div>
+    <div id="container">
+        <div id="poke-container" class="pokemon">
+            <button id="poke-btn" onclick="renderEverything(); return false;"></button>
+        </div>
+    </div>
+    <script src="pokeapi.js"></script>
+</body>
+</html>
