@@ -1,0 +1,9 @@
+<div *ngIf="show">
+  <div *ngFor="let i of data">
+    {{i}}
+  </div>
+</div>
+
+<button (click)="toggleClick()">Toggle Show</button>
+<app-test></app-test>
+<app-newtest></app-newtest>
