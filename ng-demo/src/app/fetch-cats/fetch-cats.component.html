@@ -1,0 +1,29 @@
+<!--example of a trmplate form and two way binding 
+    using the "banana box"-->
+<form #catform ="ngForm" (submit)="getCats(catform)">
+    <input type="number" name="numCats" id="numCats" [(ngModel)] = "numCats" #numcat ="ngModel"
+    [required]="validation.required" [min]="validation.min" [max]="validation.max">
+    <div *ngIf="numcat.invalid && (numcat.touched && numcat.dirty)"
+        class="alert">
+        <div *ngIf="numcat.errors?.['min']">
+            the min value is 1
+        </div>
+        <div *ngIf="numcat.errors?.['max']">
+            the max value is 25
+        </div>
+    </div>
+    <input type="submit" value="get cats">
+</form>
+<!-- examples of pipes, used to format how you display your data-->
+<!--{{catpics | json}}
+{{now | date}} -->
+
+
+
+<div *ngFor="let pic of catpics">
+    <img [src]="pic.url" width=200 alt="">
+    <button (click) ="vote({id: pic.id, amount: 1})">^</button>
+    <button (click)="vote({id: pic.id, amount: -1})">v</button>
+</div>
+
+<button (click)="backToHome()">Take me back to home</button>
