@@ -1,0 +1,11 @@
+<legend>Get a Chuck Norris joke!</legend>
+<fieldset>
+  <label for="animalRadio">Animal</label>
+  <input (click)="handleSelection($event)" type="radio" id="animalRadio" value="animal" name="jokeSelection">
+
+  <label for="devRadio">Dev</label>
+  <input (click)="handleSelection($event)" type="radio" id="devRadio" value="dev" name="jokeSelection">
+</fieldset>
+
+<button (click)="handleClick()">Get me a joke!</button>
+<div>{{ joke }}</div>

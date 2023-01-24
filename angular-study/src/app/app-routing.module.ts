@@ -1,19 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DisplayComponent } from './display/display.component';
-import { AboutusComponent } from './aboutus/aboutus.component';
+import { HomeComponent } from './home/home.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+
 const routes: Routes = [
   {
     path: "**",
-    component: DisplayComponent,
+    component: HomeComponent,
     title: "Home"
   },
-  {path: "app-display",
-   component: DisplayComponent,
+  {path: "app-home",
+   component: HomeComponent,
    title: "Home"},
    {
-    path: "app-aboutus",
-    component: AboutusComponent,
+    path: "app-about-us",
+    component: AboutUsComponent,
     title: "About Us"}
 ];
 

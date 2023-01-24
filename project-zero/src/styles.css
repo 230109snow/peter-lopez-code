@@ -1,1 +1,90 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(240, 78%, 61%);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height: 100vh;
+
+}
+
+.container {
+    background-color: hsl(240, 51%, 26%);
+    width: 400px;
+    height: 80vh;
+    border-radius: 20px;
+    
+}
+
+.upper-info {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 50%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.weather-info {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: darkslateblue;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.location, .temperature, .lowerlabel, .other-info-label, .other-info-label, .other-info-value{
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.lower-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1em;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+}
+
+.lowerlabel{
+    width: 100%;
+    margin-bottom: 10%;
+}
+.lower-container {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    width: 50%;
+    background-color: darkslateblue;
+    
+}
+
+.other-info-label {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.other-info-value {
+    display: flex;
+    width: 50%;
+    justify-content: flex-start;
+    align-items: center;
+
+}

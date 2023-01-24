@@ -1,0 +1,26 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:var(--main-bg-color);
+    width:100%;
+    margin: 5px 6px;
+}
+
+img {
+    width: 75px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+li {
+    margin: 0px 10px;
+}
+
+a { 
+    color: white;
+    text-decoration: none;
+}
