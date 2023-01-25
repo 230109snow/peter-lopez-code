@@ -12,8 +12,10 @@ export class DisplayComponent {
   
   constructor (private weatherService : WeatherService) {}
 
-  city : string = "Miami" ;
+  city : string = "" ;
+  cityName : string = "";
   curTemp : number = 0 ;
+  weather : string = "";
   feelTemp : number = 0;
   precip : number = 0;
   humidity : number = 0;
@@ -24,7 +26,9 @@ export class DisplayComponent {
     
     this.weatherService.getWeather(this.city).subscribe((data) => {
       this.data = data;
+      this.cityName = data.location.name;
       this.curTemp = data.current.temp_f;
+      this.weather = data.current.condition.text;
       this.feelTemp = data.current.feelslike_f;
       this.precip = data.current.precip_in;
       this.humidity = data.current.humidity;
@@ -42,6 +46,7 @@ export class DisplayComponent {
       console.log(data.current.precip_in);
       console.log(data.current.humidity);
       console.log(data.current.wind_mph); */
+      this.cityName = data.location.name;
       this.curTemp = data.current.temp_f;
       this.feelTemp = data.current.feelslike_f;
       this.precip = data.current.precip_in;

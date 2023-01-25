@@ -6,15 +6,16 @@
 <div class="input-container">
     <form (ngSubmit) ="getWeather()">
         <label for="city">Enter a city name:</label>
-        <input class="city" id="city" type="text" placeholder="Miami" [(ngModel)]="city" name="city">
+        <input class="city" id="city" type="text" placeholder="Enter City Here!" [(ngModel)]="city" name="city">
         <button>Get Weather</button>
     </form>
 </div>
-<div class="container">
+<div *ngIf="cityName" class="container">
     <div class="upper-info">
         <div class="weather-info">
-            <div class="location">{{this.city}}</div>
+            <div class="location">{{this.cityName}}</div>
             <div class="temperature">{{this.curTemp}}°F</div>
+            <div class="weather">{{this.weather}}</div>
         </div>
     </div>
     <div class="lower-info">
