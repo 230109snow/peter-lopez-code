@@ -14,6 +14,7 @@ export class DisplayComponent {
 
   city : string = "" ;
   cityName : string = "";
+  region : string = "";
   curTemp : number = 0 ;
   weather : string = "";
   feelTemp : number = 0;
@@ -27,6 +28,7 @@ export class DisplayComponent {
     this.weatherService.getWeather(this.city).subscribe((data) => {
       this.data = data;
       this.cityName = data.location.name;
+      this.region = data.location.region;
       this.curTemp = data.current.temp_f;
       this.weather = data.current.condition.text;
       this.feelTemp = data.current.feelslike_f;
@@ -36,7 +38,7 @@ export class DisplayComponent {
 
     });
   }
-
+/*
   ngOnInit(){
     
     this.weatherService.getWeather(this.city).subscribe((data) => {
@@ -45,7 +47,7 @@ export class DisplayComponent {
       console.log(data.current.feelslike_f);
       console.log(data.current.precip_in);
       console.log(data.current.humidity);
-      console.log(data.current.wind_mph); */
+      console.log(data.current.wind_mph); 
       this.cityName = data.location.name;
       this.curTemp = data.current.temp_f;
       this.feelTemp = data.current.feelslike_f;
@@ -54,6 +56,6 @@ export class DisplayComponent {
       this.windSpeed = data.current.wind_mph;
 
     });
-  }
+  }*/
 
 }
