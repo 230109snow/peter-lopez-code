@@ -6,19 +6,21 @@ import { AppComponent } from './app.component';
 import { DisplayComponent } from './display/display.component';
 import { WeatherService } from './weather.service';
 import { NavbarComponent } from './navbar/navbar.component';
-import { AboutusComponent } from './aboutus/aboutus.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
     AppComponent,
     DisplayComponent,
     NavbarComponent,
-    AboutusComponent
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [WeatherService],
   bootstrap: [AppComponent]

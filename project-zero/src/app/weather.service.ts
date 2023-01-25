@@ -11,7 +11,7 @@ export class WeatherService {
   constructor(private http: HttpClient) { }
 
   getWeather(city: string):Observable<any> {
-    const url = `${apiroot}current.json?key=${apikey}&q=${city}`;
+    const url = `${apiroot}forecast.json?key=${apikey}&q=${city}&days=1&aqi=no&alerts=no`;
     return this.http.get(url, {
       
     })

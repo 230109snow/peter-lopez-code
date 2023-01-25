@@ -6,18 +6,18 @@ import { WeatherService } from './weather.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent /*implements OnInit*/{
 
   title = 'project-zero';
   data! : any;
   cityName : string = '';
 
 constructor(private weatherService: WeatherService){}
-  ngOnInit(): void {
+  /*ngOnInit(): void {
     this.weatherService.getWeather("Miami").subscribe((data) => {
       this.data = data;
-      console.log(data.current.temp_c);
+      console.log(data.current.temp_f);
     });
-  }
+  }*/
 
 }

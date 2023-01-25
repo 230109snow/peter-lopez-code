@@ -1,39 +1,50 @@
-
+<!--<form #weatherform ="ngForm" (submit)="getWeather(city)">
+    <input type="text" name="city" id="city" [(ngModel)] = "city" #city ="ngModel"
+    [required]="validation.required">
+    <input type="submit" value="Get Weather">
+</form> -->
+<div class="input-container">
+    <form (ngSubmit) ="getWeather()">
+        <label for="city">Enter a city name:</label>
+        <input class="city" id="city" type="text" placeholder="Miami" [(ngModel)]="city" name="city">
+        <button>Get Weather</button>
+    </form>
+</div>
 <div class="container">
     <div class="upper-info">
         <div class="weather-info">
-            <div class="location">Miami</div>
-            <div class="temperature">15°</div>
+            <div class="location">{{this.city}}</div>
+            <div class="temperature">{{this.curTemp}}°F</div>
         </div>
     </div>
     <div class="lower-info">
-        <div class="lowerlabel">More Information:</div>
+        <div class="lowerlabel">More Information: </div>
         <div class="lower-container">
             <div class="other-info-label">
-                <span>Low: </span>
+                <span>Rain (inches): </span>
             </div>
-            <div class="other-info-value">10°</div>
+            <div class="other-info-value">{{this.precip}} in.</div>
         </div>
 
         <div class="lower-container">
             <div class="other-info-label">
-                <span>High: </span>
+                <span>Feels Like: </span>
             </div>
-            <div class="other-info-value">20°</div>
+            <div class="other-info-value">{{this.feelTemp}}°F</div>
         </div>
 
         <div class="lower-container">
             <div class="other-info-label">
                 <span>Humidity: </span>
             </div>
-            <div class="other-info-value">50%</div>
+            <div class="other-info-value">{{this.humidity}}%</div>
         </div>
 
         <div class="lower-container">
             <div class="other-info-label">
                 <span>Wind Speed: </span>
             </div>
-            <div class="other-info-value">15m/h</div>
+            <div class="other-info-value">{{this.windSpeed}}m/h</div>
         </div>
     </div>
 </div>
